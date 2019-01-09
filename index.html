@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test</title>
+  <script src="p5min.js"></script>
+  <script src="tabletop.js"></script>
+  <script src="scribles.js"></script>
+  <script src="scripts/block.js"></script>
+  <script src="scripts/userinterface.js"></script>
+  <script src="scripts/game.js"></script>
+  <script src="scripts/sketch.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="holder">
+    <div id="canvas-holder"></div>
+    <div id="gui">
+      <div id="gamename" class="center">
+        <h1>GOLAD</h1>
+      </div>
+      <div id="redzone" class="center">
+       <div>
+         <h3>human</h3>
+         <h2>player 1</h2>
+         <h3>
+           <span id="redtilesdisplay">62</span> 
+           tiles
+         </h3>
+       </div>
+      </div>
+      <div id="bluezone" class="center">
+        <div>
+         <h3>human</h3>
+         <h2>player 2</h2>
+         <h3>
+           <span id="bluetilesdisplay">62</span> 
+           tiles
+         </h3>
+       </div>
+      </div>
+      <div id="buttonzone" class="center">
+        <div>
+            <h3>1A/1A</h3>
+            <div>
+              <button type="button" onclick="finishmove()">finish move</button>
+            </div>
+            <div>
+              <button type="button">!undo!</button>
+              <button type="button">!redo!</button>
+            </div>
+            <div>
+              <button type="button">!main menu!</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script type='text/javascript'>    
+var publicSpreadsheetURL = "https://docs.google.com/spreadsheets/d/1VrSy96-3MeZJT_OJV4j4OgSbcLt77hb1ltEUGGLusik";
+  function init() {
+    Tabletop.init( { key: publicSpreadsheetUrl,
+                     callback: showInfo,
+                     simpleSheet: true } )
+  }
+
+  function showInfo(data, tabletop) {
+    alert('Successfully processed!')
+    console.log(data);
+  }
+
+  window.addEventListener('DOMContentLoaded', init)
+</script>
+
+</body>
+</html>
